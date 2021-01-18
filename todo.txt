@@ -1,0 +1,6 @@
+~~~~~ TODO ~~~~~
+
+1. Adding Color to location by case happened
+2. Adding legends
+3. Adding ES6 feature to our code
+4. Adding backend to handle new submitted case and change based on that
