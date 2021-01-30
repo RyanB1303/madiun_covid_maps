@@ -1,4 +1,4 @@
-# madiun_covid_maps
+# Madiun COVID-19 Map
 Display Madiun City COVID-19 Case Based of Districts
 
 current_version:
