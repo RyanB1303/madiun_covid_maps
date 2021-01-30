@@ -4,3 +4,43 @@
 2. Adding legends
 3. Adding ES6 feature to our code
 4. Adding backend to handle new submitted case and change based on that
+
+
+  areas: {
+            polygon1567: {
+              value: "250",
+
+              href: "#",
+              tooltip: {
+                content:
+                  '<span style="font-weight:bold;">Nord (59)</span><br />Population : 250',
+              },
+            },
+            path1569: {
+              value: "350",
+
+              href: "#",
+              tooltip: {
+                content:
+                  '<span style="font-weight:bold;">Nord (59)</span><br />Population : 2617939',
+              },
+            },
+            path1571: {
+              value: "550",
+
+              href: "#",
+              tooltip: {
+                content:
+                  '<span style="font-weight:bold;">Nord (59)</span><br />Population : 2617939',
+              },
+            },
+            polygon1635: {
+              value: "1100",
+
+              href: "#",
+              tooltip: {
+                content:
+                  '<span style="font-weight:bold;">Nord (59)</span><br />Population : 2617939',
+              },
+            },
+          },
