@@ -4,7 +4,7 @@
 
 ## Frontend
 
-- [x] Display Madiun District [x]
+- [x] Display Madiun District
 - [ ] Display District Name
 - [ ] Display Case Number
 - [ ] Display Case Number on each District
