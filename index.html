@@ -18,12 +18,30 @@
       }
 
       .container {
-        max-width: 1000px;
+        max-width: 240px;
         margin: auto;
+        max-height: 480px;
       }
 
       .map {
         stroke-width: 1px;
+      }
+      .mapael .map {
+        position: relative;
+      }
+
+      .mapael .mapTooltip {
+        position: absolute;
+        background-color: #fff;
+        moz-opacity: 0.7;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 1000;
+        max-width: 200px;
+        display: none;
+        color: #343434;
       }
     </style>
     <script
@@ -54,7 +72,7 @@
               attrs: {
                 stroke: "#ffffff",
                 width: 1,
-                fill: "#16c79a",
+                fill: "#352c3a",
               },
               attrsHover: {
                 "stroke-width": 0.3,
@@ -63,45 +81,174 @@
           },
           legend: {
             area: {
-              title: "Kecamatan Madiun",
+              title: "Terkonfirmasi Positif COVID-19",
               slices: [
                 {
-                  max: 300,
+                  min: 0,
+                  max: 20,
                   attrs: {
-                    fill: "#0971F5",
+                    fill: "#5abd30",
                   },
-                  label: "kurang dari 300",
+                  label: "0 - 20 kasus",
                 },
                 {
-                  min: 300,
-                  max: 500,
+                  min: 20,
+                  max: 40,
                   attrs: {
-                    fill: "#1ED0D3",
+                    fill: "#96ce27",
                   },
-                  label: "kurang dari 500",
+                  label: "20 - 40 kasus",
                 },
                 {
-                  min: 500,
-                  max: 1000,
+                  min: 40,
+                  max: 60,
                   attrs: {
-                    fill: "#D31EC2",
+                    fill: "#ef960f",
                   },
-                  label: "kurang dari 1000",
+                  label: "40 - 60 kasus",
                 },
                 {
-                  min: 1000,
+                  min: 60,
                   attrs: {
-                    fill: "#3f7d1a",
+                    fill: "#ff3c00",
                   },
-                  label: "lebih dari 1000",
+                  label: "60 kasus",
                 },
               ],
             },
           },
           areas: {
+            banjarejo: {
+              value: "48",
+              tooltip: { content: "<span>Banjarejo 48 kasus</span>" },
+            },
+            demangan: {
+              value: "60",
+              tooltip: { content: "<span>Demangan 60 kasus</span>" },
+            },
+            josenan: {
+              value: "40",
+              tooltip: { content: "<span>Josenan 40 kasus</span>" },
+            },
+            kanigoro: {
+              value: "55",
+              tooltip: { content: "<span>Kanigoro 55 kasus</span>" },
+            },
             kartoharjo: {
-              value: "100",
-              tooltip: "<span>Kartoharjo</span> | <strong>100</strong>",
+              value: "22",
+              tooltip: { content: "<span>Kartoharjo 22 kasus</span>" },
+            },
+            kejuron_1: {
+              value: "44",
+              tooltip: { content: "<span>Kejuron 44 kasus</span>" },
+            },
+            kejuron_2: {
+              value: "44",
+              tooltip: { content: "<span>Kejuron 44 kasus</span>" },
+            },
+            kelun: {
+              value: "16",
+              tooltip: { content: "<span>Kelun 16 kasus</span>" },
+            },
+            klegen: {
+              value: "69",
+              tooltip: { content: "<span>Klegen 69 kasus</span>" },
+            },
+            kuncen_1: {
+              value: "",
+              tooltip: { content: "<span>Kuncen  kasus</span>" },
+            },
+            kuncen_2: {
+              value: "",
+              tooltip: { content: "<span>Kuncen  kasus</span>" },
+            },
+            madiun_lor: {
+              value: "45",
+              tooltip: { content: "<span>Madiun Lor 45 kasus</span>" },
+            },
+            manguharjo_1: {
+              value: "27",
+              tooltip: { content: "<span>Manguharjo 27 kasus</span>" },
+            },
+            manguharjo_2: {
+              value: "27",
+              tooltip: { content: "<span>Manguharjo 27 kasus</span>" },
+            },
+            manisrejo: {
+              value: "86",
+              tooltip: { content: "<span>Manisrejo 86 kasus</span>" },
+            },
+            mojorejo: {
+              value: "72",
+              tooltip: { content: "<span>Mojorejo 72 kasus</span>" },
+            },
+            nambangan_kidul_1: {
+              value: "37",
+              tooltip: { content: "<span>Nambangan Kidul 37 kasus</span>" },
+            },
+            nambangan_kidul_2: {
+              value: "37",
+              tooltip: { content: "<span>Nambangan Kidul 37 kasus</span>" },
+            },
+            nambangan_lor_1: {
+              value: "35",
+              tooltip: { content: "<span>Nambangan Lor 35 kasus</span>" },
+            },
+            nambangan_lor_2: {
+              value: "35",
+              tooltip: { content: "<span>Nambangan Lor 35 kasus</span>" },
+            },
+            ngegong: {
+              value: "12",
+              tooltip: { content: "<span>Ngegong 12 kasus</span>" },
+            },
+            oro_oro_ombo: {
+              value: "25",
+              tooltip: { content: "<span>Oro-Oro Ombo 25 kasus</span>" },
+            },
+            pandean_1: {
+              value: "63",
+              tooltip: { content: "<span>Pandean 63 kasus</span>" },
+            },
+            pandean_2: {
+              value: "63",
+              tooltip: { content: "<span>Pandean 63 kasus</span>" },
+            },
+            pagongangan: {
+              value: "17",
+              tooltip: { content: "<span>Pagongangan 17 kasus</span>" },
+            },
+            patihan: {
+              value: "18",
+              tooltip: { content: "<span>Patihan 18 kasus</span>" },
+            },
+            pilangbango: {
+              value: "12",
+              tooltip: { content: "<span>Pilangbango 12 kasus</span>" },
+            },
+            rejomulyo: {
+              value: "54",
+              tooltip: { content: "<span>Rejomulyo 54 kasus</span>" },
+            },
+            sogaten: {
+              value: "31",
+              tooltip: { content: "<span>Sogaten 31 kasus</span>" },
+            },
+            sukosari: {
+              value: "17",
+              tooltip: { content: "<span>Sukosari 17 kasus</span>" },
+            },
+            taman: {
+              value: "68",
+              tooltip: { content: "<span>Taman 68 kasus</span>" },
+            },
+            tawangrejo: {
+              value: "24",
+              tooltip: { content: "<span>Tawangrejo 24 kasus</span>" },
+            },
+            winongo: {
+              value: "61",
+              tooltip: { content: "<span>Winongo 61 kasus</span>" },
             },
           },
         });
@@ -110,11 +257,14 @@
   </head>
   <body>
     <div class="container">
-      <h1>Madiun Maps by Department</h1>
+      <h1>Kelurahan Kota Madiun</h1>
 
       <div class="mapcontainer">
         <div class="map">
           <span>Alternative content for the map</span>
+        </div>
+        <div class="areaLegend">
+          <span>Alternative content for the legend</span>
         </div>
       </div>
     </div>
