@@ -6,7 +6,6 @@
     <title>Madiun Maps</title>
     <style type="text/css">
       body {
-        color: hotpink;
         font-family: Helvetica, Arial, sans-serif;
       }
 
@@ -18,8 +17,8 @@
       }
 
       .container {
-        max-width: 240px;
-        margin: auto;
+        max-width: 480px;
+        margin: 2rem;
         max-height: 480px;
       }
 
@@ -75,19 +74,25 @@
                 fill: "#352c3a",
               },
               attrsHover: {
-                "stroke-width": 0.3,
+                "stroke-width": 0.5,
+                fill: "#00f7fe",
               },
             },
           },
           legend: {
             area: {
               title: "Terkonfirmasi Positif COVID-19",
+              mode: "horizontal",
+              labelAttrsHover: {
+                fill: "#0700fe",
+              },
               slices: [
                 {
                   min: 0,
                   max: 20,
                   attrs: {
-                    fill: "#5abd30",
+                    fill: "#96ce27",
+                    width: 50,
                   },
                   label: "0 - 20 kasus",
                 },
@@ -95,7 +100,8 @@
                   min: 20,
                   max: 40,
                   attrs: {
-                    fill: "#96ce27",
+                    fill: "#5abd30",
+                    width: 50,
                   },
                   label: "20 - 40 kasus",
                 },
@@ -103,7 +109,8 @@
                   min: 40,
                   max: 60,
                   attrs: {
-                    fill: "#ef960f",
+                    fill: "#fe8600",
+                    width: 50,
                   },
                   label: "40 - 60 kasus",
                 },
@@ -111,6 +118,7 @@
                   min: 60,
                   attrs: {
                     fill: "#ff3c00",
+                    width: 50,
                   },
                   label: "60 kasus",
                 },
